@@ -78,6 +78,7 @@ a {
 :root {
     --gray-color: #4d4d4c;
     --green-color: #71b64b;
+    --skew: skew(-11deg);
 }
 
 .container {
@@ -113,7 +114,7 @@ a {
     top: 0; right: 0; bottom: 0; left: 0;
     z-index: -1;
     background: var(--green-color);
-    transform: skew(-12deg);
+    transform: var(--skew);
 }
 .btn:hover {
     color: var(--gray-color);
@@ -232,7 +233,7 @@ a {
     top: 0; right: 0; bottom: 0; left: 0;
     z-index: -1;
     background: var(--green-color);
-    transform: skew(-12deg);
+    transform: var(--skew);
     opacity: 0;
     transition: opacity .3s ease-out;
     will-change: auto;
@@ -364,6 +365,97 @@ a {
 /* services page */ 
 
 /* home page */
+.home .header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: transparent;
+    z-index: 1;
+    overflow: hidden;
+}
+.home .header_hr,
+.home .top_nav {
+    display: none;
+}
+.home .nav_link {
+    padding: 15px 30px 15px 30px;
+}
+.header_img {
+    position: relative;
+    overflow: hidden;
+    height: 900px;
+    background: url('img/bg.jpg') no-repeat top center;
+    background-size: cover;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 300px;
+    text-align: center;
+}
+.header_img nav {
+    position: absolute;
+    top: 0;
+    left: -20px;
+    bottom: 0;
+    height: 100%;
+    flex-direction: column;
+    z-index: 1;
+}
+.header_img nav:after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: -169px;
+    width: 400px;
+    background: rgba(0, 0, 0, .5);
+    transform: var(--skew);
+}
+.header_img h2 {
+    color: var(--green-color);
+    font-size: 64px;
+    letter-spacing: .12em;
+    font-family: "PFDinDisplayProMediumItalic";
+    margin: 0;
+}
+.header_img p {
+    color: #fff;
+    font-size: 28px;
+    font-family: "PFDinDisplayProLightItalic";
+    text-transform: none;
+    margin-top: 40px;
+}
+.buttons {
+    position: absolute;
+    top: 300px;
+    right: -80px;
+    flex-direction: column;
+}
+.buttons a {
+    width: 458px;
+    height: 150px;
+    display: block;
+    font-family: "PFDinDisplayProMediumItalic";
+    color: #fff;
+    text-align: left;
+}
+.buttons a:first-child {
+    background: url('./img/btn1.png') no-repeat top left;
+    font-size: 22px;
+    margin-bottom: 60px;
+    padding: 40px 0 0 40px;
+}
+.buttons a:last-child {
+    background: url('./img/btn2.png') no-repeat top left;
+    font-size: 18px;
+    letter-spacing: .1em;
+    padding: 90px 0 0 15px;
+}
+
+
+
 .news_wrapper {
     padding-top: 50px;
     padding-bottom: 40px;
@@ -544,7 +636,7 @@ a {
 
 .card_block {
     overflow: hidden;
-    transform: skew(-12deg);
+    transform: var(--skew);
     margin-top: 50px;
     background: #000;
     position: relative;
@@ -642,7 +734,7 @@ a {
     width: 15px;
     height: 8px;
     background: var(--green-color);
-    transform: skew(-12deg);
+    transform: var(--skew);
 }
 
 .form {
@@ -657,7 +749,7 @@ a {
     top: 0; left: 0; right: 0; bottom: 0;
     width: 100%;
     background: #ededed;
-    transform: skew(-12deg);
+    transform: var(--skew);
     z-index: -1;
 }
 .form h2 {
@@ -737,7 +829,7 @@ a {
     transform: translateX(-50%);
     z-index: -1;
     background: var(--green-color);
-    transform: skew(-12deg);
+    transform: var(--skew);
 }
 .form .btn:hover {
     color: var(--gray-color);
@@ -762,7 +854,7 @@ a {
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
     z-index: -1;
-    transform: skew(-12deg);
+    transform: var(--skew);
     transition: .3s ease-out;
     will-change: auto;
 }
