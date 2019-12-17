@@ -3,12 +3,15 @@ $(document).ready(function(){
     
     var burger = $('.burger'),
         top_nav = $('.top_nav'),
+        closeMenu = $('.close_menu')
         play = $('.video_play'),
         controller = new ScrollMagic.Controller();
 
     burger.click(function() {
-        burger.toggleClass('open')
-        top_nav.toggleClass('open')
+        top_nav.addClass('open')
+    })
+    closeMenu.click(function() {
+        top_nav.removeClass('open')
     })
 
     if(play) {
