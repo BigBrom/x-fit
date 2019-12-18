@@ -826,9 +826,6 @@ a {
 /* card page */
 
 /* schedule page */
-.programs {
-
-}
 .programs_item {
     color: var(--green-color);
     font-family: "PFDinDisplayProMediumItalic";
@@ -860,7 +857,7 @@ a {
 
 .schedule_form {
     align-items: flex-end;
-    margin-bottom: 60px;
+    margin: 60px 0;
 }
 .schedule_form .btn {
     border: none;
@@ -871,45 +868,95 @@ a {
     transition: .3s ease-out;
     will-change: auto;
     cursor: pointer;
+    margin-top: 0;
 }
-.select_wrapper {
+
+
+
+
+
+
+
+/* custom select */
+.custom-select {
     position: relative;
-}
-.select_wrapper:after {
-    content: '';
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 5px 5px 0 5px;
-    border-color: var(--green-color) transparent transparent transparent;
-}
-.select {
     cursor: pointer;
     margin-right: 20px;
-    border: none;
-    text-transform: uppercase;
-    display: block;
     width: 280px;
     font-family: "PFDinDisplayProMediumItalic";
     padding: 10px 0;
     border-bottom: 2px solid var(--gray-color);
     color: var(--gray-color);
-    border-radius: 0%;
-    position: relative;
-    box-shadow: none;
-    background: transparent;
-    background-image: none;
 }
-.select:focus {
-    outline: none;
-}
-
-.select.time {
+.custom-select.time {
     width: 140px;
+} 
+.custom-select select {
+    display: none; /*hide original SELECT element:*/
 }
+  
+
+  
+  /*style the arrow inside the select element:*/
+  .select-selected:after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 5px 0 5px;
+    border-color: var(--green-color) transparent transparent transparent;
+  }
+  
+  
+  /*style the items (options), including the selected item:*/
+  .select-items div,.select-selected {
+    cursor: pointer;
+    user-select: none;
+  }
+  .select-items div {
+    font-family: "PFDinDisplayProRegular";
+    
+  }
+
+  
+  /*style items (options):*/
+  .select-items {
+    position: absolute;
+    border: 1px solid var(--gray-color);
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    padding: 20px 10px;
+    background: #fff;
+  }
+  .select-items div {
+      padding: 10px;
+  }
+  /*hide the items when the select box is closed:*/
+  .select-hide {
+    display: none;
+  }
+  
+  .select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+/* custom select */
+
+
+
+
+
+
+
+
+
+
+
+
 .schedule_title {
     color: #444;
     font-size: 20px;
@@ -1123,6 +1170,7 @@ responsive css
     .buttons a:last-child:hover {
         background: url('img/btn2mh.png')
     }
+    .custom-select {width: 200px;}
 }
 
 /* tablet */
@@ -1229,11 +1277,10 @@ responsive css
         flex-direction: column;
         align-items: flex-start;
     }
-    .select, .select.time {
+    .custom-select, .custom-select.time {
         width: 280px;
         margin: 0 0 30px 0;
     }
-    .select_wrapper:after {right: 0;}
     .schedule_form .btn {margin: 0;}
 }
 @media screen and (max-width: 960px) {
