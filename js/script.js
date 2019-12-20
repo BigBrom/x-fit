@@ -64,6 +64,7 @@ $(document).ready(function(){
 
 
 
+
 // custom select
 var x, i, j, selElmnt, a, b, c;
 /*look for any elements with the class "custom-select":*/
@@ -141,3 +142,33 @@ if(x.length) {
 }
 
 // custom select
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ya map
+ymaps.ready(init);
+function init () {
+  var myMap = new ymaps.Map("map", {
+          center: [55.8083, 37.5868],
+          zoom: 16,
+          controls: ['zoomControl']
+      }),
+  myPlacemark = new ymaps.Placemark([55.8083, 37.5868]);
+  myMap.geoObjects.add(myPlacemark);
+  myMap.behaviors.disable('scrollZoom');
+}

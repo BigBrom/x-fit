@@ -1596,6 +1596,72 @@ a:visited { }
 
 
 
+/* contacts page */
+.contacts_items {
+    justify-content: space-between;
+}
+.contacts_item {
+    width: 30%;
+    color: var(--gray-color);
+}
+.contacts_item h3 {
+    font-size: 22px;
+    font-family: "PFDinDisplayProMediumItalic";
+}
+.contacts_item span,
+.contacts_item a {
+    font-size: 18px;
+    font-family: "PFDinDisplayProLight";
+    text-transform: none;
+    display: block;
+    color: var(--gray-color);
+}
+.contacts_item span span {display: inline; color: var(--gray-color);}
+.contacts_item span.green {
+    color: var(--green-color);
+}
+#map {
+    height: 460px;
+    margin: 70px 0;
+}
+/* contacts page */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1893,6 +1959,13 @@ responsive css
 
 /* mobile */
 @media screen and (max-width: 480px) {
+    
+    .contacts_items {
+        align-content: flex-start;
+    }
+    .contacts_item {
+        width: 100%;
+    }
     .schedule_description {width: 100%;}
     .programs, .schedule_form {width: 100%;}
     .container {
