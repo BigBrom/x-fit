@@ -2080,3 +2080,64 @@ responsive css
 }
 
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.schedule_day_item {
+    
+}
+.schedule_day_area {
+    height: 38px;
+}
+.schedule_times_item {
+    margin: 0;
+    width: 60px;
+    height: 110px;
+    align-items: center;
+}
+.schedule_day_event {
+    padding: 10px;
+    width: 150px;
+    height: 100px;
+    background: #f4f4f4;
+    overflow: auto;
+    margin: 10px 0 0 10px;
+}
+.schedule_day_event span {
+    display: block;
+    margin-bottom: 10px;
+}
+.schedule_day_event h4{
+    color: var(--green-color);
+    margin: 0 0 10px;
+    font-size: 13px;
+}
+.schedule_day_event p {
+    margin: 0;
+    font-size: 13px;
+    color: var(--gray-color);
+}
+.schedule_day_data{
+    width: 150px;
+    height: 38px;
+    color: var(--gray-color);
+    font-size: 14px;
+    font-family: "PFDinDisplayProMediumItalic";
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--gray-color);
+    margin-left: 10px;
+}
